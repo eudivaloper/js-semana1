@@ -24,15 +24,20 @@
   </header>
 
   <main id="main-content">
-    <form class="d-flex flex-column align-items-center">
-      <div class="form-group pt-5 col-6 text-center">
-        <label for="juite">Reclame aqui</label>
-        <textarea class="form-control" id="juite" placeholder="texto" rows="3"></textarea>
-      </div>
-      <div>
-        <button class="btn btn-primary" type="submit">reclamar</button>
-      </div>
-    </form>
+    <section id="form-field">
+      <form id="form" class="d-flex flex-column align-items-center">
+        <div class="form-group pt-5 col-6 text-center h1">
+          <label for="juite">Reclame aqui</label>
+          <textarea class="form-control" id="text-field" placeholder="texto" rows="3"></textarea>
+        </div>
+        <div>
+          <button class="btn btn-primary" id="btn-submit" type="submit">reclamar</button>
+        </div>
+      </form>
+    </section>
+    <section class="d-flex justify-content-center">
+      <div id="tweets" class="col-6"></div>
+    </section>
   </main>
 
   <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
