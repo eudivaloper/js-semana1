@@ -30,8 +30,6 @@
 #JS II
 
 15/10
-- testes de unidade
-- refatoração com testes
 
 16/10
 
