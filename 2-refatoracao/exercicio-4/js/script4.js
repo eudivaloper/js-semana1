@@ -11,7 +11,6 @@ function obtemAluno(){
     return obterDadosDoFormulario(document.querySelector("#form-adiciona"));  
 }
 
-
 function notasSaoValidas(aluno) {
     if (!(aluno.notaUmAluno > 0 && aluno.notaUmAluno <= 10)) {
         document.querySelector("#mensagem-erro").innerHTML = "A nota 1 está incorreta";
