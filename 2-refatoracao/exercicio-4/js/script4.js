@@ -4,6 +4,7 @@ adicionarAluno.addEventListener('click', function (event) {
     event.preventDefault();
     if (notasSaoValidas(obtemAluno())) {
         insereAluno(obtemAluno());
+        document.getElementById("form-adiciona").reset();
     }
 });
 
@@ -12,13 +13,13 @@ function obtemAluno(){
 }
 
 function notasSaoValidas(aluno) {
-    if (!(aluno.notaUmAluno > 0 && aluno.notaUmAluno <= 10)) {
+    if (!(aluno.notaUmAluno >= 0 && aluno.notaUmAluno <= 10)) {
         document.querySelector("#mensagem-erro").innerHTML = "A nota 1 está incorreta";
         mensagemErro();
         return false;
     }
 
-   if (!(aluno.notaDoisAluno > 0 && aluno.notaDoisAluno <= 10)) {
+   if (!(aluno.notaDoisAluno >= 0 && aluno.notaDoisAluno <= 10)) {
         document.querySelector("#mensagem-erro").innerHTML = "A nota 2 está incorreta";
         mensagemErro();
         return false;
@@ -39,29 +40,20 @@ function validaAluno(aluno){
 }
 
 function insereAluno(aluno){
-
-    // criando a linha
     const alunoTr = document.createElement("tr");
-
-    const nomeAlunoTd = document.createElement("td");
-    const notaUmAlunoTd = document.createElement("td");
-    const notaDoisAlunoTd = document.createElement("td");
-    const mediaAlunoTd = document.createElement("td");
-
-    nomeAlunoTd.textContent = aluno.nomeAluno;
-    notaUmAlunoTd.textContent = aluno.notaUmAluno;
-    notaDoisAlunoTd.textContent = aluno.notaDoisAluno;
-    // mediaAlunoTd.textContent = calculaMedia(notaUmAluno, notaDoisAluno);
-    mediaAlunoTd.textContent = aluno.media;
-
-    alunoTr.appendChild(nomeAlunoTd);
-    alunoTr.appendChild(notaUmAlunoTd);
-    alunoTr.appendChild(notaDoisAlunoTd);
-    alunoTr.appendChild(mediaAlunoTd);
-
+    alunoTr.innerHTML =   "<td>" + aluno.nomeAluno + "</td>"
+                        + "<td>" + aluno.notaUmAluno + "</td>"
+                        + "<td>" + aluno.notaDoisAluno + "</td>"
+                        + "<td>" + aluno.media + "</td>"
     const tabela = document.querySelector("#tabela-alunos");
-    tabela.appendChild(alunoTr);
-    
+    tabela.appendChild(alunoTr);   
+    alunoReprovado(aluno, alunoTr); 
+}
+
+function alunoReprovado(aluno, alunoRow){
+    if (aluno.media < 5) {
+        alunoRow.classList.add("abaixo-da-media");
+    }
 }
 
 function obterDadosDoFormulario(formulario) {

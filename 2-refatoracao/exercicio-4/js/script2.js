@@ -1,45 +1,24 @@
-// buscando todos os alunos
-const todosOsAlunos = document.querySelectorAll(".aluno");
-// console.log(todosOsAlunos);
+//mostrar event listener por último! deixar a função declarada depois, enquanto isso
 
-// imprimindo cada aluno da lista
-for (let i = 0; i < todosOsAlunos.length; i++) {
-    // console.log(todosOsAlunos[i]);
+window.addEventListener('load', function () {
+    imprimeTabelaDoHTML();
+});
 
-    const aluno = todosOsAlunos[i];
+function imprimeTabelaDoHTML(){
+    const todosOsAlunos = document.querySelectorAll(".aluno");
 
-    // buscar o valor da primeira nota
-    const tdPrimeiraNota = aluno.querySelector(".info-notaum");
-    const primeiraNota = tdPrimeiraNota.textContent;
-
-    // buscar o valor da segunda nota
-    const tdSegundaNota = aluno.querySelector(".info-notadois");
-    const segundaNota = tdSegundaNota.textContent;
-
-    const mediaFinal = aluno.querySelector(".info-media");
-
-    let notaEhValida = true;
-
-    if (primeiraNota < 0 || primeiraNota > 10) {
-        notaEhValida = false;
-        mediaFinal.textContent = "Nota Inválida.";
-    }
-
-    if (notaEhValida) {
-        // calculando a média e apresentando o resultado
+    todosOsAlunos.forEach(function(aluno){
+        const primeiraNota = aluno.querySelector(".info-notaum").textContent;
+        const segundaNota = aluno.querySelector(".info-notadois").textContent;
         let mediaCalculada = calculaMedia(primeiraNota, segundaNota);
-
         if (mediaCalculada < 5) {
-            // aluno.style.backgroundColor = "red";
             aluno.classList.add("abaixo-da-media");
         }
-
-        mediaFinal.textContent = mediaCalculada.toFixed(2);
-    }
+        mediaFinal = mediaCalculada.toFixed(2);
+        aluno.querySelector(".info-media").textContent = mediaFinal;
+    })
 }
 
 function calculaMedia(notaUmRecebida, notaDoisRecebida) {
-    let mediaCalculadaNaFuncao = 0;
-    mediaCalculadaNaFuncao = (parseFloat(notaUmRecebida) + parseFloat(notaDoisRecebida)) / 2;
-    return mediaCalculadaNaFuncao;
+    return (parseFloat(notaUmRecebida) + parseFloat(notaDoisRecebida)) / 2;
 }
