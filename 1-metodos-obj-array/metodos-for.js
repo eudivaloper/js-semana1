@@ -1,27 +1,54 @@
+
+//exercício de aquecimento
+
+// function ifes (a, b, c) {
+//   if (a != undefined && b == undefined && c == undefined) {
+//     return a;
+//   } else if (a != undefined && b != undefined && c == undefined) {
+//     return a + b;
+//   } else if (a != undefined && b != undefined && c != undefined) {
+//     return (a + b) / c;
+//   } else if (a == undefined && b == undefined && c == undefined){
+//     return false;
+//   } else {
+//     return null;
+//   }
+// }
+
+// for com break
+
+// for (var current = 20; current++) {
+//   if (current % 7 == 0)
+//     break;
+// }
+
+//for classico com i
+
+// for (let number = 0; number <= 100; number++){
+//   if(number % 7 === 0){
+//     console.log("xuxu");
+//   } else {
+//     console.log(number);
+//   }
+// }
+
 // for (const cadaValor of objeto.chaveArray) {
-//   // console.log(cadaValor)
+//   console.log(cadaValor)
 // }
 
 // for (const chave in objeto) {
-//   console.log(chave);
-//   console.log(objeto[chave])
-//   console.log(objeto.chave)
+//   console.log("chave", chave);
+//   console.log("valor", objeto[chave])
 // }
 
-// for (const index in objeto.chaveArray) {
-//   console.log(index);
-//   console.log(objeto.chaveArray[index])
+// for (const indice in objeto.chaveArray) {
+//   console.log(indice);
 // }
 
 // for (const index in "string") {
 //   console.log(index);
-//   const char = "string"[1]
-//   console.log(char);
+//   console.log("string"[1]);
 // }
-
-// const chave = "minhaChave1";
-// console.log(objeto.minhaChave1)
-// console.log(objeto[chave])
 
 // for (const valor of meuArray) {
 //   console.log(valor.nome);
