@@ -2,13 +2,13 @@
 
 ## 08/10
 
-- aula prática de métodos de arrays e objetos, com exercícios (foco em JS, sem DOM)
-- objetos e arrays em JS + métodos para criar e iterar (métodos do ES6: filter, reduce, map) + exercícios guiados para cada método.
+- refatoração de código com base no exercício 4 da Helena. Javascript funcional e com algumas funcionalidades do ES6 (arrow functions e ternários. let e const a Helena já vai apresentar)
 
 
 ## 09/10
 
-- refatoração de código com base no exercício 4 da Helena. Javascript funcional e com algumas funcionalidades do ES6 (arrow functions e ternários. let e const a Helena já vai apresentar)
+- aula prática de métodos de arrays e objetos, com exercícios (foco em JS, sem DOM)
+- objetos e arrays em JS + métodos para criar e iterar (métodos do ES6: filter, reduce, map) + exercícios guiados para cada método.
 
 
 ## 10/10 e 11/10
