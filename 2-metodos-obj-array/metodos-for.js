@@ -1,6 +1,13 @@
 
 //exercício de aquecimento
 
+//escrever uma função com 3 parâmetros.
+//caso a função, ao ser chamada, receba somente 1 parâmetro, deve retornar esse parâmetro.
+//caso receba 2 parâmetros, deve retornar a soma de ambos.
+//caso receba 3 parâmetros, deve retornar a soma dos dois primeiros, dividida pelo terceiro.
+//caso não receba nenhum parâmetro, deve retornar false.
+
+
 // function ifes (a, b, c) {
 //   if (a != undefined && b == undefined && c == undefined) {
 //     return a;
@@ -8,10 +15,8 @@
 //     return a + b;
 //   } else if (a != undefined && b != undefined && c != undefined) {
 //     return (a + b) / c;
-//   } else if (a == undefined && b == undefined && c == undefined){
-//     return false;
 //   } else {
-//     return null;
+//     return false;
 //   }
 // }
 

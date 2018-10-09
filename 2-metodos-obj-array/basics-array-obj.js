@@ -1,4 +1,5 @@
 //métodos "proto" de array
+const array = [1, 2, 3];
 
 //length
 //devolve o tamanho (comprimento) da array
@@ -7,7 +8,6 @@ console.log(array.length);
 //push
 //recebe um valor e adiciona na posição final do array
 
-const array = [1, 2, 3];
 console.log(array.push(4));
 console.log(array);
 
